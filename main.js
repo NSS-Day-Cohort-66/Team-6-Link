@@ -9,14 +9,7 @@ const materials = [
 ];
 const meals = [];
 
-// TODO: Need to implement the below algorithm to our cook function.
-
-/*
-    We want all meals to be printed when we provide the correct ingredients
-
-    Add more conditionals so that we are able to add more meals to the list of meals
-        conditionals: should compare the given ingredients to the required ingredients to make the meal
-*/
+// TODO: We need to review and start part 2 in the readme.
 
 // function: this is for the meals being made
 const cook = (firstIngredient, secondIngredient) => {
@@ -26,15 +19,32 @@ const cook = (firstIngredient, secondIngredient) => {
     secondIngredient === "Big Hearty Truffle"
   ) {
     meals.push("Mushroom Rice Balls");
+  } else if (
+    firstIngredient === "Hateno Cheese" &&
+    secondIngredient === "Bird Egg"
+  ) {
+    meals.push("Cheesy Omlette");
+  } else if (
+    firstIngredient === "Tabantha Wheat" &&
+    secondIngredient === "Hateno Cheese"
+  ) {
+    meals.push("Cheesy Hylian Pizza");
+  } else if (
+    firstIngredient === "Raw Prime Meat" &&
+    secondIngredient === "Hylian Rice"
+  ) {
+    meals.push("Prime Meat and Rice Bowl");
+  } else {
+    meals.push("Not a recipe");
   }
-  //   else {
-  //     meals.push("Not a recipe");
-  //   }
 };
 
 // invoke the above function, we are passing arguments into the function
 cook(materials[0], materials[1]);
+cook(materials[4], materials[5]);
 cook(materials[2], materials[1]);
+cook(materials[2], materials[4]);
+cook(materials[3], materials[0]);
 
 // displaying something...
 console.log("MEALS:");
